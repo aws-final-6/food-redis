@@ -6,7 +6,7 @@ metadata:
 data:
   setup-sentinel.sh: |
     #!/bin/sh
-    MASTER_IP=$(nslookup mlr-dev-rds-sfs-0.mlr-dev-rds-svc.mlr-dev-rds-ns.svc.cluster.local | awk '/^Address: / { print $2 }')
+    MASTER_IP=$(nslookup mlr-dev-rds-sts-0.mlr-dev-rds-svc.mlr-dev-rds-ns.svc.cluster.local | awk '/^Address: / { print $2 }')
     if [ -z "$MASTER_IP" ]; then
       echo "Could not resolve Redis master IP"
       exit 1

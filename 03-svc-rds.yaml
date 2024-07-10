@@ -7,7 +7,7 @@ metadata:
 spec:
   clusterIP: None
   selector:
-    app: mlr-dev-rds-sfs
+    app: mlr-dev-rds-sts
   ports:
     - port: 6379
       targetPort: 6379
